@@ -80,7 +80,8 @@ celerybeat-schedule
 *.sage.py
 
 # Pycharm
-*.idea
+.idea
+.idea/
 
 # dotenv
 .env
