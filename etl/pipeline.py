@@ -20,7 +20,6 @@ class Pipeline:
             for data in extractor.on_extract_data():
                 pprint(data)
                 for processor in self._processors:
-                    processor.on_process_data(data)
-
-                for loader in self._loaders:
-                    loader.on_load_data(data)
+                    pdata = processor.on_process_data(data)
+                    for loader in self._loaders:
+                        loader.on_load_data(pdata)

@@ -9,8 +9,7 @@
           "type": "CSVExtractor",
           "cfg_values":{
             "filename": "examples/files/sample.csv",
-            "separator": ",",
-            "chunk_size": 300
+            "separator": ","
           }
         }
       ],
