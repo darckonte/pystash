@@ -1,0 +1,21 @@
+[
+  {
+    "pipeline": {
+      "name": "csv_pipeline",
+      "schedule": "5 * * * *",
+      "extractors": [
+        {
+          "module": "etl.extractors.csv_extractor",
+          "type": "CSVExtractor",
+          "cfg_values":{
+            "filename": "examples/files/sample.csv",
+            "separator": ",",
+            "chunk_size": 300
+          }
+        }
+      ],
+      "processors": [],
+      "loaders": []
+    }
+  }
+]
